@@ -111,6 +111,9 @@
     .social{
        width: 65%;
     }
+    .newsletter button{
+        padding: 0.5rem;
+    }
 }
 
 @media screen and (max-width: 300px) {

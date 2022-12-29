@@ -36,11 +36,18 @@ template.innerHTML = `
             <p class="site-title blue">TheBox</p>
         </div>
         <div class="menu-icon">
-            <!--div-- class="up line"></!--div-->
             <div class="line"></div>
-            <!--div-- class="down line"></!--div-->
         </div>
     </nav>
+    <div class="open-menu">
+        <ul class="mobile-item-container">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">About Us</a></li>
+            <li class="nav-item"><a href="#">Project</a></li>
+            <li class="nav-item"><a href="#">Services</a></li>
+            <li class="nav-item orange"><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
 `
 
 class NavBar extends HTMLElement {
@@ -48,7 +55,27 @@ class NavBar extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" })
         this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const menu = this.shadowRoot.querySelector(".menu-icon");
+        const menuItems = this.shadowRoot.querySelector(".mobile-item-container");
+        const line = this.shadowRoot.querySelector(".line");
+        let isOpen = false;
+        console.log(menu)
+        menu.addEventListener("click" , e => {
+            if(!isOpen){
+                line.style.top = "-0.75rem";
+                menuItems.style.display = "flex";
+                line.classList.add("line-clicked");
+            }else{
+                line.style.top = "0.25rem"
+                menuItems.style.display = "none";
+                line.classList.remove("line-clicked")
+            }
+            isOpen = !isOpen;
+        })
     }
+    // connecedCallback(){
+        
+    // }
 }
 
 export default NavBar;

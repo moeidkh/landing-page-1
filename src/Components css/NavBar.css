@@ -9,6 +9,8 @@
 .navbar-container{
     max-width: 1640px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 ul{
     list-style-type: none;
@@ -81,7 +83,25 @@ ul{
 .line::before{
     top: 0;
 }
+.line-clicked{
+    background-color: #fff;
+}
 
+.line-clicked::after{
+    transform: rotate(42deg) translateY(-0.05rem) translateX(0.1rem);
+}
+.line-clicked::before{
+    transform:  rotate(-44deg) translateY(1rem) translateX(-1rem);
+}
+.mobile-item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+    padding: 0 1.5rem 1.5rem;
+    display: none;
+    transition: display 0.5s ease-in-out;
+}
 @media screen and (max-width: 992px) {
     .nav-container{
         width: 100%;
