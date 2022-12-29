@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+*::after,
+*::before,
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+.fi{
+    font-size: 3rem;
+}
+.exprience-box{
+    width: fit-content;
+    padding: 1.5rem;
+    box-shadow: -5px 10px 10px #ccc;
+    position: relative;
+    border-radius: 0.25rem;
+}
+.left{
+    left: -1.5rem;
+    top: -0.5rem;
+}
+.right{
+    right: -0.75rem;
+    top: -0.5rem;
+}
+.exprience-box-icon{
+    position: absolute;
+    /* color: rgb(230, 188, 147); */
+    color: #667299;
+}
+.exprience-box-number{
+    font-size: 4rem;
+}
+.exprience-box-desc{
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid orange;
+    color: #667299;
+}
+
+
+@media screen and (max-width: 576px) {
+    .exprience-box{
+        padding: 1.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+}

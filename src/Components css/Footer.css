@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+
+*::after,
+*::before,
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem 10rem;
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.footer-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.section{
+    display: flex;
+    gap: 1rem;
+}
+.footer-logo{
+    display: flex;
+    font-style: italic;
+    font-weight: bolder;
+    align-items: center;
+    gap: 1rem;
+    color: darkblue;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.footer-input{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.newsletter{
+    display: flex;
+    gap: 1rem;
+}
+.newsletter input{
+    height: 2rem;
+    padding: 0.5rem;
+    border: none;
+    outline: 2px solid #ccc;
+    border-radius: 0.25rem;
+}
+.newsletter button{
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    background-color: orange;
+    border-radius: 0.25rem;
+    color: #fff;
+}
+.social-logo{
+    font-size: 2.5rem;
+}
+.social-logo i{
+    cursor: pointer;
+}
+.copy{
+    padding: 2rem 18rem;
+    background-color: #2947A9;
+    color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+    .copy{
+        padding: 2rem 10rem;
+    }   
+}
+
+@media screen and (max-width: 992px) {
+    .footer{
+        padding: 5rem 0;
+    }
+    .copy{
+        padding: 1rem 2rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .address{
+        width: 65%;
+        flex-direction: row;
+    }
+    .footer-logo{
+        display: none;
+    }
+    .social{
+       width: 65%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .footer{
+        width: 100%;
+    }
+    .newsletter{
+        flex-direction: column;
+    }
+}
